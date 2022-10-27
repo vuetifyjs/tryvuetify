@@ -7,29 +7,37 @@
 
       <div class="py-4" />
 
-      <v-card theme="dark" class="d-inline-block mx-auto pa-4">
-        <template #title>
-          <span style="font-family: 'Roboto Mono', mono;">
-            vue create my-app -p vuetifyjs/v3-preset
-          </span>
-        </template>
+      <v-fade-transition appear>
+        <v-card
+          class="d-inline-block mx-auto pa-4"
+          max-width="580"
+          theme="dark"
+          width="100%"
+        >
+          <template #title>
+            <span style="font-family: 'Roboto Mono', mono">
+              {{ cmd }}
+            </span>
+          </template>
 
-        <template #append>
-          <v-btn
-            :icon="copied ? 'mdi-check' : 'mdi-content-copy'"
-            border
-            variant="text"
-            @click="copy"
-          >
-            <v-fade-transition leave-absolute>
-              <v-icon
-                :key="copied"
-                color="grey"
-              />
-            </v-fade-transition>
-          </v-btn>
-        </template>
-      </v-card>
+          <template #append>
+            <v-btn
+              :icon="copied ? 'mdi-check' : 'mdi-content-copy'"
+              aria-label="Copy Code"
+              border
+              variant="text"
+              @click="copy"
+            >
+              <v-fade-transition leave-absolute>
+                <v-icon
+                  :key="copied"
+                  color="grey"
+                />
+              </v-fade-transition>
+            </v-btn>
+          </template>
+        </v-card>
+      </v-fade-transition>
 
       <div class="py-3">
         <v-btn
@@ -44,12 +52,16 @@
     </v-responsive>
   </v-container>
 
-  <v-footer app>
+  <v-footer
+    app
+    height="64"
+  >
     <a
       class="d-inline-block mx-auto"
       href="http://vuetifyjs.com/"
       target="_blank"
       rel="noopener noreferrer"
+      title="Vuetify Documentation"
     >
       <v-img
         width="48"
@@ -63,11 +75,12 @@
   import { ref } from 'vue'
 
   const copied = ref(false)
+  const cmd = 'yarn create vuetify --preset=default'
 
   function copy () {
     copied.value = true
 
-    navigator.clipboard.writeText('vue create my-app -p vuetifyjs/v3-preset')
+    navigator.clipboard.writeText(cmd)
 
     setTimeout(() => {
       copied.value = false
