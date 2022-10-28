@@ -2,15 +2,19 @@
   <v-container class="fill-height">
     <v-responsive class="d-flex align-center text-center fill-height">
       <h1 class="d-inline-block text-h2 font-weight-black">
-        <span class="font-weight-thin text-h2">try</span><span class="text-primary">Vuetify</span>
+        <span class="font-weight-thin text-h2">Try</span> <span class="text-primary">Vuetify</span>
       </h1>
 
-      <div class="py-4" />
+      <div class="py-3">
+        <small class="text-medium-emphasis">Copy and paste the following into your terminal</small>
+      </div>
+
+      <div class="py-3" />
 
       <v-fade-transition appear>
         <v-card
-          class="d-inline-block mx-auto pa-4"
-          max-width="580"
+          class="d-inline-block mx-auto pa-4 text-start"
+          max-width="480"
           theme="dark"
           width="100%"
         >
@@ -38,17 +42,6 @@
           </template>
         </v-card>
       </v-fade-transition>
-
-      <div class="py-3">
-        <v-btn
-          href="https://next.vuetifyjs.com/getting-started/installation/"
-          target="_blank"
-          rel="noopener noreferrer"
-          append-icon="mdi-open-in-new"
-        >
-          Full Guide
-        </v-btn>
-      </div>
     </v-responsive>
   </v-container>
 
@@ -75,7 +68,7 @@
   import { ref } from 'vue'
 
   const copied = ref(false)
-  const cmd = 'yarn create vuetify --preset=default'
+  const cmd = 'yarn create vuetify'
 
   function copy () {
     copied.value = true
