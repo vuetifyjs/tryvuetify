@@ -48,18 +48,57 @@
   <v-footer
     app
     height="64"
+    class="justify-center"
   >
     <a
-      class="d-inline-block mx-auto"
-      href="http://vuetifyjs.com/"
+      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      href="https://twitter.com/vuetifyjs"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Vuetify Twitter"
+    >
+      <v-icon size="32" icon="mdi-twitter" />
+    </a>
+    <a
+      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      href="https://github.com/vuetifyjs/vuetify"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Vuetify GitHub"
+    >
+      <v-icon size="32" icon="mdi-github" />
+    </a>
+
+    <a
+      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      href="https://v3.vuetifyjs.com/"
       target="_blank"
       rel="noopener noreferrer"
       title="Vuetify Documentation"
     >
       <v-img
-        width="48"
+        width="64"
         src="https://cdn.vuetifyjs.com/docs/images/logos/v.svg"
       />
+    </a>
+
+    <a
+      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      href="https://community.vuetifyjs.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Vuetify Discord"
+    >
+      <v-icon size="32" icon="mdi-discord" />
+    </a>
+    <a
+      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      href="https://reddit.com/r/vuetifyjs"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Vuetify Reddit"
+    >
+      <v-icon size="32" icon="mdi-reddit" />
     </a>
   </v-footer>
 </template>
