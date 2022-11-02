@@ -51,26 +51,26 @@
     class="justify-center"
   >
     <a
-      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      class="d-inline-block mx-2 social-link"
       href="https://twitter.com/vuetifyjs"
       target="_blank"
       rel="noopener noreferrer"
       title="Vuetify Twitter"
     >
-      <v-icon size="32" icon="mdi-twitter" />
+      <v-icon size="24" icon="mdi-twitter" />
     </a>
     <a
-      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      class="d-inline-block mx-2 social-link"
       href="https://github.com/vuetifyjs/vuetify"
       target="_blank"
       rel="noopener noreferrer"
       title="Vuetify GitHub"
     >
-      <v-icon size="32" icon="mdi-github" />
+      <v-icon size="24" icon="mdi-github" />
     </a>
 
     <a
-      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      class="d-inline-block mx-4 text-decoration-none text-primary"
       href="https://v3.vuetifyjs.com/"
       target="_blank"
       rel="noopener noreferrer"
@@ -83,22 +83,22 @@
     </a>
 
     <a
-      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      class="d-inline-block mx-2 social-link"
       href="https://community.vuetifyjs.com/"
       target="_blank"
       rel="noopener noreferrer"
       title="Vuetify Discord"
     >
-      <v-icon size="32" icon="mdi-discord" />
+      <v-icon size="24" icon="mdi-discord" />
     </a>
     <a
-      class="d-inline-block mx-4 mx-xl-8 text-decoration-none text-primary"
+      class="d-inline-block mx-2 social-link"
       href="https://reddit.com/r/vuetifyjs"
       target="_blank"
       rel="noopener noreferrer"
       title="Vuetify Reddit"
     >
-      <v-icon size="32" icon="mdi-reddit" />
+      <v-icon size="24" icon="mdi-reddit" />
     </a>
   </v-footer>
 </template>
@@ -119,3 +119,14 @@
     }, 2000)
   }
 </script>
+
+<style>
+.social-link {
+  color: rgba(var(--v-theme-primary), var(--v-medium-emphasis-opacity));
+  text-decoration: none;
+  transition: .2s ease-in-out;
+}
+.social-link:hover {
+  color: rgba(var(--v-theme-primary), 1);
+}
+</style>
