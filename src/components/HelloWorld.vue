@@ -19,8 +19,8 @@
           width="100%"
         >
           <template #title>
-            <span style="font-family: 'Roboto Mono', mono">
-              {{ cmd }}
+            <span style="font-family: 'Roboto Mono', mono;">
+              {{ pms[cmd] }}
             </span>
           </template>
 
@@ -42,12 +42,24 @@
           </template>
         </v-card>
       </v-fade-transition>
+
+      <div class="text-overline py-3">
+        <a
+          v-for="(_, key) in pms"
+          :key="key"
+          :class="cmd !== key && 'text-decoration-none'"
+          href="#"
+          class="text-primary mx-2"
+          @click.prevent="cmd = key"
+          v-text="key"
+        />
+      </div>
     </v-responsive>
   </v-container>
 
   <v-footer
     app
-    height="64"
+    height="80"
     class="justify-center"
   >
     <a
@@ -107,12 +119,17 @@
   import { ref } from 'vue'
 
   const copied = ref(false)
-  const cmd = 'yarn create vuetify'
+  const cmd = ref('yarn')
+  const pms = {
+    yarn: 'yarn create vuetify',
+    npm: 'npm init vuetify',
+    pnpm: 'pnpm create vuetify',
+  }
 
   function copy () {
     copied.value = true
 
-    navigator.clipboard.writeText(cmd)
+    navigator.clipboard.writeText(pms[cmd.value])
 
     setTimeout(() => {
       copied.value = false
@@ -121,12 +138,12 @@
 </script>
 
 <style>
-.social-link {
-  color: rgba(var(--v-theme-primary), var(--v-medium-emphasis-opacity));
-  text-decoration: none;
-  transition: .2s ease-in-out;
-}
-.social-link:hover {
-  color: rgba(var(--v-theme-primary), 1);
-}
+  .social-link {
+    color: rgba(var(--v-theme-primary), var(--v-medium-emphasis-opacity));
+    text-decoration: none;
+    transition: .2s ease-in-out;
+  }
+  .social-link:hover {
+    color: rgba(var(--v-theme-primary), 1);
+  }
 </style>

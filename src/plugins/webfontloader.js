@@ -7,7 +7,6 @@
 export async function loadFonts () {
   const webFontLoader = await import(/* webpackChunkName: "webfontloader" */'webfontloader')
 
-  console.log('here')
   webFontLoader.load({
     google: {
       families: [
