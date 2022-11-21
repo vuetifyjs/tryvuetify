@@ -6,7 +6,7 @@
       </h1>
 
       <div class="py-3">
-        <small class="text-medium-emphasis">Copy and paste the following into your terminal</small>
+        <small class="text-medium-emphasis">Copy and paste the following into your terminal,<br>then follow the prompts</small>
       </div>
 
       <div class="py-3" />

@@ -1,15 +1,19 @@
 module.exports = {
-  root: true,
   env: {
-    node: true,
+    browser: true,
+    es2021: true,
   },
   extends: [
     'plugin:vue/vue3-recommended',
-    '@vue/standard',
+    'standard',
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser',
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
+  plugins: [
+    'vue',
+  ],
   rules: {
     'no-var': 'error',
     // allow paren-less arrow functions
