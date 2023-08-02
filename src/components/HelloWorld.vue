@@ -26,7 +26,7 @@
 
           <template #append>
             <v-btn
-              :icon="copied ? 'mdi-check' : 'mdi-content-copy'"
+              :icon="copied ? mdiCheck : mdiContentCopy"
               aria-label="Copy Code"
               border
               variant="text"
@@ -35,7 +35,7 @@
               <v-fade-transition leave-absolute>
                 <v-icon
                   :key="copied"
-                  color="grey"
+                  color="medium-emphasis"
                 />
               </v-fade-transition>
             </v-btn>
@@ -69,7 +69,7 @@
       rel="noopener noreferrer"
       title="Vuetify Twitter"
     >
-      <v-icon size="24" icon="mdi-twitter" />
+      <v-icon size="24" :icon="mdiTwitter" />
     </a>
     <a
       class="d-inline-block mx-2 social-link"
@@ -78,7 +78,7 @@
       rel="noopener noreferrer"
       title="Vuetify GitHub"
     >
-      <v-icon size="24" icon="mdi-github" />
+      <v-icon size="24" :icon="mdiGithub" />
     </a>
 
     <a
@@ -89,6 +89,7 @@
       title="Vuetify Documentation"
     >
       <v-img
+        alt="Vuetify logo"
         width="64"
         src="https://cdn.vuetifyjs.com/docs/images/logos/v.svg"
       />
@@ -101,7 +102,7 @@
       rel="noopener noreferrer"
       title="Vuetify Discord"
     >
-      <v-icon size="24" icon="mdi-discord" />
+      <v-icon size="24" :icon="mdiDiscord" />
     </a>
     <a
       class="d-inline-block mx-2 social-link"
@@ -110,13 +111,21 @@
       rel="noopener noreferrer"
       title="Vuetify Reddit"
     >
-      <v-icon size="24" icon="mdi-reddit" />
+      <v-icon size="24" :icon="mdiReddit" />
     </a>
   </v-footer>
 </template>
 
 <script setup>
   import { ref } from 'vue'
+  import {
+    mdiCheck,
+    mdiContentCopy,
+    mdiDiscord,
+    mdiGithub,
+    mdiReddit,
+    mdiTwitter,
+  } from '@mdi/js'
 
   const copied = ref(false)
   const cmd = ref('yarn')
