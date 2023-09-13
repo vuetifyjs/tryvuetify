@@ -57,75 +57,16 @@
     </v-responsive>
   </v-container>
 
-  <v-footer
-    app
-    height="80"
-    class="justify-center"
-  >
-    <a
-      class="d-inline-block mx-2 social-link"
-      href="https://twitter.com/vuetifyjs"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Vuetify Twitter"
-    >
-      <v-icon size="24" :icon="mdiTwitter" />
-    </a>
-    <a
-      class="d-inline-block mx-2 social-link"
-      href="https://github.com/vuetifyjs/vuetify"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Vuetify GitHub"
-    >
-      <v-icon size="24" :icon="mdiGithub" />
-    </a>
-
-    <a
-      class="d-inline-block mx-4 text-decoration-none text-primary"
-      href="https://v3.vuetifyjs.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Vuetify Documentation"
-    >
-      <v-img
-        alt="Vuetify logo"
-        width="64"
-        src="https://cdn.vuetifyjs.com/docs/images/logos/v.svg"
-      />
-    </a>
-
-    <a
-      class="d-inline-block mx-2 social-link"
-      href="https://community.vuetifyjs.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Vuetify Discord"
-    >
-      <v-icon size="24" :icon="mdiDiscord" />
-    </a>
-    <a
-      class="d-inline-block mx-2 social-link"
-      href="https://reddit.com/r/vuetifyjs"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Vuetify Reddit"
-    >
-      <v-icon size="24" :icon="mdiReddit" />
-    </a>
-  </v-footer>
+  <app-footer />
 </template>
 
 <script setup>
+  // Components
+  import AppFooter from '@/components/Footer.vue'
+
+  // Utilities
   import { ref } from 'vue'
-  import {
-    mdiCheck,
-    mdiContentCopy,
-    mdiDiscord,
-    mdiGithub,
-    mdiReddit,
-    mdiTwitter,
-  } from '@mdi/js'
+  import { mdiCheck, mdiContentCopy } from '@mdi/js'
 
   const copied = ref(false)
   const cmd = ref('yarn')
