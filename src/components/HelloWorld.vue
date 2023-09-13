@@ -133,6 +133,7 @@
     yarn: 'yarn create vuetify',
     npm: 'npm init vuetify',
     pnpm: 'pnpm create vuetify',
+    bun: 'bun create vuetify',
   }
 
   function copy () {
