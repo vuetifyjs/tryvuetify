@@ -72,7 +72,7 @@
   const cmd = ref('yarn')
   const pms = {
     yarn: 'yarn create vuetify',
-    npm: 'npm init vuetify',
+    npm: 'npm init vuetify@latest',
     pnpm: 'pnpm create vuetify',
     bun: 'bun create vuetify',
   }
