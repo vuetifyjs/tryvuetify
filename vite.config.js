@@ -15,6 +15,22 @@ export default defineConfig({
       autoImport: true,
       styles: { configFile: 'src/styles/settings.scss' },
     }),
+    {
+      name: 'inject-umami',
+      transformIndexHtml (html, ctx) {
+        if (!ctx.bundle) return
+
+        return [{
+          tag: 'script',
+          attrs: {
+            defer: true,
+            src: 'https://umami.vuetifyjs.com/script.js',
+            'data-website-id': '7764764c-e55f-4bda-80f4-6e66f078b63e',
+          },
+          injectTo: 'head',
+        }]
+      },
+    },
   ],
   define: { 'process.env': {} },
   resolve: {
