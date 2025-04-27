@@ -1,10 +1,8 @@
-// Plugins
+import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
-import vuetify from 'vite-plugin-vuetify'
-
-// Utilities
+import Fonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
-import path from 'path'
+import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,16 +13,29 @@ export default defineConfig({
       autoImport: true,
       styles: { configFile: 'src/styles/settings.scss' },
     }),
+    Fonts({
+      fontsource: {
+        families: [
+          {
+            name: 'Roboto',
+            weights: [100, 300, 400, 500, 700, 900],
+            styles: ['normal', 'italic'],
+          },
+        ],
+      },
+    }),
     {
       name: 'inject-umami',
       transformIndexHtml (html, ctx) {
-        if (!ctx.bundle) return
+        if (!ctx.bundle) {
+          return
+        }
 
         return [{
           tag: 'script',
           attrs: {
-            defer: true,
-            src: 'https://umami.vuetifyjs.com/script.js',
+            'defer': true,
+            'src': 'https://umami.vuetifyjs.com/script.js',
             'data-website-id': '7764764c-e55f-4bda-80f4-6e66f078b63e',
           },
           injectTo: 'head',

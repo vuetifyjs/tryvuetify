@@ -1,0 +1,499 @@
+/* animate background-position, slightly rotate  */
+@keyframes hero-gradient-animation {
+  0% {
+      --y-0: 63%;
+      --c-0: hsla(217.59493670886076, 100%, 30%, 1);
+      --x-0: 93%;
+      --s-start-0: 8.392121895570533%;
+      --s-end-0: 38.584065253664996%;
+      --y-1: -7%;
+      --x-1: 33%;
+      --s-start-1: 8.392121895570533%;
+      --s-end-1: 22.10878124098502%;
+      --c-1: hsla(0, 0%, 0%, 1);
+      --c-2: hsla(0, 0%, 0%, 1);
+      --s-start-2: 8.392121895570533%;
+      --s-end-2: 22.558651527792346%;
+      --y-2: 7%;
+      --x-2: 84%;
+      --x-3: 14%;
+      --s-start-3: 8.392121895570533%;
+      --s-end-3: 22.558651527792346%;
+      --y-3: 5%;
+      --c-3: hsla(0, 0%, 0%, 1);
+      --x-4: 7%;
+      --c-4: hsla(0, 0%, 0%, 1);
+      --s-start-4: 8.392121895570533%;
+      --s-end-4: 22.558651527792346%;
+      --y-4: 96%;
+      --c-5: hsla(0, 0%, 0%, 1);
+      --y-5: 90%;
+      --s-start-5: 8.392121895570533%;
+      --s-end-5: 22.558651527792346%;
+      --x-5: 93%;
+      --c-6: hsla(217.68844221105527, 100%, 39%, 0);
+      --x-6: 3%;
+      --s-start-6: 8.392121895570533%;
+      --s-end-6: 39.67138181429644%;
+      --y-6: 61%;
+      --y-7: 59%;
+      --s-start-7: 8.392121895570533%;
+      --s-end-7: 49.58090142552271%;
+      --c-7: hsla(217.68844221105527, 100%, 39%, 1);
+      --x-7: 94%;
+      --x-8: 48%;
+      --y-8: 63%;
+      --s-start-8: 8.392121895570533%;
+      --s-end-8: 34.815367581495366%;
+      --c-8: hsla(217.68844221105527, 100%, 39%, 1);
+      --x-9: 96%;
+      --s-start-9: 8.392121895570533%;
+      --s-end-9: 31.77166380372925%;
+      --c-9: hsla(217.59493670886076, 100%, 30%, 1);
+      --y-9: 78%;
+  }
+
+  50% {
+      --y-0: 59%;
+      --c-0: hsla(217.59493670886076, 100%, 30%, 1);
+      --x-0: 2%;
+      --s-start-0: 12.892043731642234%;
+      --s-end-0: 42.94837818044209%;
+      --y-1: 10%;
+      --x-1: 42%;
+      --s-start-1: 8.392121895570533%;
+      --s-end-1: 41.69445156991687%;
+      --c-1: hsla(0, 0%, 0%, 1);
+      --c-2: hsla(0, 0%, 0%, 1);
+      --s-start-2: 8.392121895570533%;
+      --s-end-2: 20.488815899465003%;
+      --y-2: 29%;
+      --x-2: 75%;
+      --x-3: 5%;
+      --s-start-3: 8.392121895570533%;
+      --s-end-3: 30.099844327777923%;
+      --y-3: 16%;
+      --c-3: hsla(0, 0%, 0%, 1);
+      --x-4: 36%;
+      --c-4: hsla(0, 0%, 0%, 1);
+      --s-start-4: 8.392121895570533%;
+      --s-end-4: 24.59566937006635%;
+      --y-4: 91%;
+      --c-5: hsla(0, 0%, 0%, 1);
+      --y-5: 91%;
+      --s-start-5: 8.392121895570533%;
+      --s-end-5: 24.59566937006635%;
+      --x-5: 70%;
+      --c-6: hsla(217.68844221105527, 100%, 39%, 0);
+      --x-6: 54%;
+      --s-start-6: 9%;
+      --s-end-6: 26.825849058644888%;
+      --y-6: 73%;
+      --y-7: 76%;
+      --s-start-7: 9%;
+      --s-end-7: 49.05074977970796%;
+      --c-7: hsla(217.68844221105527, 100%, 39%, 1);
+      --x-7: 57%;
+      --x-8: 11%;
+      --y-8: 53%;
+      --s-start-8: 9;
+      --s-end-8: 26.166345747226664%;
+      --c-8: hsla(217.68844221105527, 100%, 39%, 1);
+      --x-9: 70%;
+      --s-start-9: 9;
+      --s-end-9: 22.152460022684956%;
+      --c-9: hsla(217.59493670886076, 100%, 30%, 1);
+      --y-9: 70%;
+  }
+
+  100% {
+      --y-1: -3%;
+      --x-1: 76%;
+      --s-start-1: 8.392121895570533%;
+      --s-end-1: 59.32232816638693%;
+      --c-1: hsla(0, 0%, 0%, 1);
+      --c-2: hsla(0, 0%, 0%, 1);
+      --s-start-2: 8.392121895570533%;
+      --s-end-2: 28.52989037790774%;
+      --y-2: 18%;
+      --x-2: 97%;
+      --x-3: 42%;
+      --s-start-3: 8.392121895570533%;
+      --s-end-3: 28.52989037790774%;
+      --y-3: 18%;
+      --c-3: hsla(0, 0%, 0%, 1);
+      --x-4: 66%;
+      --c-4: hsla(0, 0%, 0%, 1);
+      --s-start-4: 8.392121895570533%;
+      --s-end-4: 28.52989037790774%;
+      --y-4: 95%;
+      --c-5: hsla(0, 0%, 0%, 1);
+      --y-5: 92%;
+      --s-start-5: 8.392121895570533%;
+      --s-end-5: 28.52989037790774%;
+      --x-5: 46%;
+      --c-6: hsla(217.68844221105527, 100%, 39%, 0);
+      --x-6: 102%;
+      --s-start-6: 24.72064437400016%;
+      --s-end-6: 47.490620328604024%;
+      --y-6: 16%;
+      --y-7: 52%;
+      --s-start-7: 10.200720718860145%;
+      --s-end-7: 50.46456494288142%;
+      --c-7: hsla(217.68844221105527, 100%, 39%, 1);
+      --x-7: 22%;
+      --x-9: 97%;
+      --s-start-9: 6.294132688184733%;
+      --s-end-9: 20.79106730744014%;
+      --c-9: hsla(217.5, 100%, 31%, 1);
+      --y-9: 51%;
+  }
+}
+
+@property --y-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 63%
+}
+
+@property --c-0 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(217.59493670886076, 100%, 30%, 1)
+}
+
+@property --x-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 93%
+}
+
+@property --s-start-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-0 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 38.584065253664996%
+}
+
+@property --y-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: -7%
+}
+
+@property --x-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 33%
+}
+
+@property --s-start-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 22.10878124098502%
+}
+
+@property --c-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --c-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --s-start-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 22.558651527792346%
+}
+
+@property --y-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 7%
+}
+
+@property --x-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 84%
+}
+
+@property --x-3 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 14%
+}
+
+@property --s-start-3 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-3 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 22.558651527792346%
+}
+
+@property --y-3 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 5%
+}
+
+@property --c-3 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --x-4 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 7%
+}
+
+@property --c-4 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --s-start-4 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-4 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 22.558651527792346%
+}
+
+@property --y-4 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 96%
+}
+
+@property --c-5 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --y-5 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 90%
+}
+
+@property --s-start-5 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-5 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 22.558651527792346%
+}
+
+@property --x-5 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 93%
+}
+
+@property --c-6 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(217.68844221105527, 100%, 39%, 0)
+}
+
+@property --x-6 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 3%
+}
+
+@property --s-start-6 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-6 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 39.67138181429644%
+}
+
+@property --y-6 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 61%
+}
+
+@property --y-7 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 59%
+}
+
+@property --s-start-7 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-7 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 49.58090142552271%
+}
+
+@property --c-7 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(217.68844221105527, 100%, 39%, 1)
+}
+
+@property --x-7 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 94%
+}
+
+@property --x-8 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 48%
+}
+
+@property --y-8 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 63%
+}
+
+@property --s-start-8 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-8 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 34.815367581495366%
+}
+
+@property --c-8 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(217.68844221105527, 100%, 39%, 1)
+}
+
+@property --x-9 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 96%
+}
+
+@property --s-start-9 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 8.392121895570533%
+}
+
+@property --s-end-9 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 31.77166380372925%
+}
+
+@property --c-9 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsla(217.59493670886076, 100%, 30%, 1)
+}
+
+@property --y-9 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 78%
+}
+.v-bg {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+.v-bg>div {
+  z-index: -30;
+  --y-0: 63%;
+  --c-0: hsla(217.59493670886076, 100%, 30%, 1);
+  --x-0: 93%;
+  --y-1: -7%;
+  --x-1: 33%;
+  --c-1: hsla(0, 0%, 0%, 1);
+  --c-2: hsla(0, 0%, 0%, 1);
+  --y-2: 7%;
+  --x-2: 84%;
+  --x-3: 14%;
+  --y-3: 5%;
+  --c-3: hsla(0, 0%, 0%, 1);
+  --x-4: 7%;
+  --c-4: hsla(0, 0%, 0%, 1);
+  --y-4: 96%;
+  --c-5: hsla(0, 0%, 0%, 1);
+  --y-5: 90%;
+  --x-5: 93%;
+  --c-6: hsla(217.68844221105527, 100%, 39%, 0);
+  --x-6: 3%;
+  --y-6: 61%;
+  --y-7: 59%;
+  --c-7: hsla(217.68844221105527, 100%, 39%, 1);
+  --x-7: 94%;
+  --x-8: 48%;
+  --y-8: 63%;
+  --c-8: hsla(217.68844221105527, 100%, 39%, 1);
+  --x-9: 96%;
+  --c-9: hsla(217.59493670886076, 100%, 30%, 1);
+  --y-9: 78%;
+  ;
+  background-color: hsla(262, 82%, 3%, 1);
+  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4)), radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5), transparent var(--s-end-5)), radial-gradient(circle at var(--x-6) var(--y-6), var(--c-6) var(--s-start-6), transparent var(--s-end-6)), radial-gradient(circle at var(--x-7) var(--y-7), var(--c-7) var(--s-start-7), transparent var(--s-end-7)), radial-gradient(circle at var(--x-8) var(--y-8), var(--c-8) var(--s-start-8), transparent var(--s-end-8)), radial-gradient(circle at var(--x-9) var(--y-9), var(--c-9) var(--s-start-9), transparent var(--s-end-9));
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: normal, normal, normal, normal, normal, normal, normal, normal, normal, normal;
+}
