@@ -36,7 +36,7 @@
                 </template>
                 <v-list density="compact" variant="flat">
                   <v-list-item
-                    v-for="manager in availableManagers"
+                    v-for="manager in managers"
                     :key="manager.value"
                     :value="manager.value"
                     @click="selectedManger = manager.value, copy()"
