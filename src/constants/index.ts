@@ -1,3 +1,5 @@
+export type Manager = 'npm' | 'pnpm' | 'yarn' | 'bun'
+
 export const managers = [
   {
     value: 'npm',
@@ -19,7 +21,7 @@ export const managers = [
     label: 'bun',
     icon: 'simple-icons:bun',
   },
-]
+] as const
 
 export const commands = {
   pnpm: 'pnpm create vuetify',

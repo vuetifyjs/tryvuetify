@@ -1,6 +1,6 @@
 <template>
   <v-container class="h-100 d-flex align-center pa-6 ">
-    <v-row align="center">
+    <v-row align="center" class="flex-column-reverse flex-md-row">
       <v-col cols="12" md="6">
         <div class="text-h6 font-weight-regular">
           We love making things simple and amazing
@@ -24,19 +24,23 @@
             flat
             rounded="lg"
           >
-            <div class="d-flex ga-4 align-center py-2 px-4">
-              <v-menu>
+            <div class="d-flex ga-4 align-center py-2 ps-2 pe-4">
+              <v-menu offset="4">
                 <template #activator="{ props }">
                   <v-icon-btn
                     cursor="pointer"
                     v-bind="props"
+                    height="32"
                     :icon="managerIcon"
-                    size="16"
+                    icon-size="22"
+                    rounded="lg"
+                    variant="tonal"
+                    width="32"
                   />
                 </template>
-                <v-list density="compact" variant="flat">
+                <v-list density="compact" rounded="lg">
                   <v-list-item
-                    v-for="manager in availableManagers"
+                    v-for="manager in managers"
                     :key="manager.value"
                     :value="manager.value"
                     @click="selectedManger = manager.value, copy()"
@@ -84,7 +88,7 @@
         </div>
       </v-col>
 
-      <v-col class="hidden-sm-and-down" cols="6">
+      <v-col class="mx-auto ms-sm-0 me-sm-auto ms-md-auto" cols="6">
         <v-img class="lg-md-auto" max-height="300" position="right" :src="logo" />
       </v-col>
     </v-row>
@@ -97,20 +101,23 @@
   <v-snackbar-queue v-model="messages" rounded="lg" variant="tonal" />
 </template>
 
-<script setup>
-  import { commands, managers } from '@/constants'
+<script setup lang="ts">
+  import { commands, type Manager, managers } from '@/constants'
   import { computed, shallowRef } from 'vue'
   import { VIconBtn } from 'vuetify/labs/components'
   import logo from '../assets/logo.svg'
   import Footer from './Footer.vue'
 
-  const selectedManger = shallowRef('npm')
+  const selectedManger = shallowRef<Manager>('npm')
 
   const managerIcon = computed(() => {
     return managers.find(m => m.value === selectedManger.value)?.icon
   })
 
-  const messages = shallowRef([])
+  const messages = shallowRef<{
+    text: string
+    timeout?: number
+  }[]>([])
 
   function copy () {
     navigator.clipboard.writeText(commands[selectedManger.value])

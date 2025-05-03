@@ -6,6 +6,6 @@
   </v-app>
 </template>
 
-<script setup>
-  import HelloWorld from '@/components/HelloWorld'
+<script setup lang="ts">
+  import HelloWorld from '@/components/HelloWorld.vue'
 </script>
