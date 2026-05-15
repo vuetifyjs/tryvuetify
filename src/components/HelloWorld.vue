@@ -17,9 +17,9 @@
         <div class="d-flex ga-4 align-center justify-start flex-wrap">
           <v-card
             v-tooltip="{ text: 'Click to copy or select needed manager', location: 'bottom', openDelay: 2000, class: '', theme: 'light' }"
-            background-color="transparent"
             border
             class="shrink-0"
+            color="transparent"
             density="compact"
             flat
             rounded="lg"
@@ -28,7 +28,6 @@
               <v-menu offset="4">
                 <template #activator="{ props }">
                   <v-icon-btn
-                    cursor="pointer"
                     v-bind="props"
                     height="32"
                     :icon="managerIcon"
@@ -103,16 +102,13 @@
 
 <script setup lang="ts">
   import { commands, type Manager, managers } from '@/constants'
-  import { computed, shallowRef } from 'vue'
-  import { VIconBtn } from 'vuetify/labs/components'
+  import { shallowRef, toRef } from 'vue'
   import logo from '../assets/logo.svg'
   import Footer from './Footer.vue'
 
   const selectedManger = shallowRef<Manager>('npm')
 
-  const managerIcon = computed(() => {
-    return managers.find(m => m.value === selectedManger.value)?.icon
-  })
+  const managerIcon = toRef(() => managers.find(m => m.value === selectedManger.value)?.icon)
 
   const messages = shallowRef<{
     text: string

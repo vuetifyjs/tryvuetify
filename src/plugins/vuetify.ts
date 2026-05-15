@@ -36,7 +36,6 @@ export default createVuetify({
       variant: 'text',
     },
     VCard: {
-      elevation: 20,
       rounded: 'lg',
     },
   },
@@ -45,8 +44,8 @@ export default createVuetify({
     themes: {
       dark: {
         colors: {
-          primary: '#1867C0',
-          secondary: '#5CBBF6',
+          primary: '#009688',
+          secondary: '#4DB6AC',
         },
       },
     },
