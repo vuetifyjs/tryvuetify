@@ -42,7 +42,7 @@
                     v-for="manager in managers"
                     :key="manager.value"
                     :value="manager.value"
-                    @click="selectedManger = manager.value, copy()"
+                    @click="onSelect(manager.value)"
                   >
                     <template #prepend>
                       <v-icon size="small">
@@ -56,7 +56,7 @@
                 </v-list>
               </v-menu>
               <button class="text-mono" @click="copy">
-                {{ commands[selectedManger] }}
+                {{ commands[selectedManager] }}
               </button>
             </div>
           </v-card>
@@ -102,21 +102,26 @@
 
 <script setup lang="ts">
   import { commands, type Manager, managers } from '@/constants'
-  import { shallowRef, toRef } from 'vue'
+  import { ref, shallowRef, toRef } from 'vue'
   import logo from '../assets/logo.svg'
   import Footer from './Footer.vue'
 
-  const selectedManger = shallowRef<Manager>('npm')
+  const selectedManager = shallowRef<Manager>('npm')
 
-  const managerIcon = toRef(() => managers.find(m => m.value === selectedManger.value)?.icon)
+  const managerIcon = toRef(() => managers.find(m => m.value === selectedManager.value)?.icon)
 
-  const messages = shallowRef<{
+  const messages = ref<{
     text: string
     timeout?: number
   }[]>([])
 
+  function onSelect (value: Manager) {
+    selectedManager.value = value
+    copy()
+  }
+
   function copy () {
-    navigator.clipboard.writeText(commands[selectedManger.value])
+    navigator.clipboard.writeText(commands[selectedManager.value])
     messages.value = [{
       text: 'Copied, now paste it to your terminal',
       timeout: 2000,
