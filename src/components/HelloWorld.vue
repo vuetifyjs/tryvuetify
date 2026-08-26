@@ -104,7 +104,7 @@
 <script setup lang="ts">
   import { commands, type Manager, managers } from '@/constants'
   import { computed, shallowRef } from 'vue'
-  import { VIconBtn } from 'vuetify/labs/components'
+  import { VIconBtn } from 'vuetify/components'
   import logo from '../assets/logo.svg'
   import Footer from './Footer.vue'
 
