@@ -36,7 +36,7 @@ export default createVuetify({
       variant: 'text',
     },
     VCard: {
-      elevation: 20,
+      elevation: 4,
       rounded: 'lg',
     },
   },
