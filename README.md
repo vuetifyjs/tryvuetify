@@ -6,7 +6,7 @@
 </div>
 
 <p align="center">
-  <a href="https://discord.gg/vuetify"><img src="https://discord.com/api/guilds/1513968811047522396/widget.png" alt="Discord"></a>
+  <a href="https://discord.gg/vuetify"><img src="https://img.shields.io/discord/1513968811047522396?logo=discord&logoColor=white&label=Discord&color=5865F2" alt="Discord"></a>
 </p>
 
 # vuetify.new
